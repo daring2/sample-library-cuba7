@@ -54,7 +54,11 @@ cuba {
     }
     tomcat {
         dir = "$project.rootDir/deploy/tomcat" 
-        }
+        port = '9080'
+        ajpPort = '9009'
+        shutdownPort = '9005'
+        debugPort = '9787' 
+    }
 }
 
 dependencies {

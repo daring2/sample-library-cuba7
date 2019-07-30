@@ -15,5 +15,5 @@
   ~ limitations under the License.
   -->
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
-    <screen id="library$Book.browse" template="com/company/library/web/book/legacy-book-browse.xml"/>
+<!--    <screen id="library$Book.browse" template="com/company/library/web/book/legacy-book-browse.xml"/>-->
 </screen-config>
