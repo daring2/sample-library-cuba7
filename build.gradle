@@ -16,7 +16,7 @@
  */
 
 buildscript {
-    ext.cubaVersion = '7.0.9'
+    ext.cubaVersion = '7.0.10'
     repositories {
         
         maven {
