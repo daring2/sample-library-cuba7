@@ -17,6 +17,7 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="library" insertBefore="administration">
         <item screen="library$Book.browse"/>
+        <item screen="library$Book.legacy-browse"/>
         <item screen="library$BookPublication.browse"/>
         <item screen="library_AccessionRegisterWindow"/>
     </menu>

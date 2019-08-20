@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        caption="msg://browseCaption"
+        caption="Books (Legacy API)"
         class="com.company.library.web.book.LegacyBookBrowse"
         focusComponent="booksTable"
         lookupComponent="booksTable"
