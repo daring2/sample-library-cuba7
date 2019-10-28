@@ -1,12 +1,15 @@
 package com.company.library.web.bookpublication;
 
+import com.company.library.entity.BookPublication;
 import com.company.library.web.bookinstance.BookInstanceBrowse;
 import com.haulmont.cuba.gui.Notifications;
 import com.haulmont.cuba.gui.Screens;
 import com.haulmont.cuba.gui.components.Action;
 import com.haulmont.cuba.gui.components.GroupTable;
+import com.haulmont.cuba.gui.components.HasValue.ValueChangeEvent;
 import com.haulmont.cuba.gui.screen.*;
-import com.company.library.entity.BookPublication;
+import com.haulmont.cuba.web.gui.components.WebGroupTable;
+import com.haulmont.cuba.web.widgets.CubaTable;
 
 import javax.inject.Inject;
 
@@ -28,7 +31,6 @@ public class BookPublicationBrowse extends StandardLookup<BookPublication> {
     @Inject
     private Screens screens;
 
-
     @Subscribe("bookPublicationsTable.browseInstances")
     protected void onBookPublicationsTableBrowseInstances(Action.ActionPerformedEvent event) {
         BookPublication bookPublication = bookPublicationsTable.getSingleSelected();
@@ -43,4 +45,12 @@ public class BookPublicationBrowse extends StandardLookup<BookPublication> {
                     .show();
         }
     }
+
+    @Subscribe("aggregateBox")
+    public void onAggregateBoxValueChange(ValueChangeEvent<Boolean> event) {
+        bookPublicationsTable.setAggregatable(event.getValue());
+        // workaround
+//        ((CubaTable) ((WebGroupTable) bookPublicationsTable).getComponent()).setFooterVisible(event.getValue());
+    }
+
 }

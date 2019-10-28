@@ -23,7 +23,8 @@
         </filter>
         <groupTable id="bookPublicationsTable"
                     width="100%"
-                    dataContainer="bookPublicationsDc">
+                    dataContainer="bookPublicationsDc"
+                    aggregatable="true">
             <actions>
                 <action id="browseInstances" caption="msg://browseInstances"/>
                 <action id="create" type="create"/>
@@ -35,7 +36,9 @@
                 <column id="book"/>
                 <column id="publisher"/>
                 <column id="town"/>
-                <column id="year"/>
+                <column id="year">
+                    <aggregation type="MAX"/>
+                </column>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
@@ -45,6 +48,7 @@
                 <button id="editBtn" action="bookPublicationsTable.edit"/>
                 <button id="removeBtn" action="bookPublicationsTable.remove"/>
                 <button id="excelButton" action="bookPublicationsTable.excel"/>
+                <checkBox id="aggregateBox" caption="Aggregation" align="MIDDLE_LEFT"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">
