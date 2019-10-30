@@ -9,7 +9,6 @@ import com.haulmont.cuba.gui.components.GroupTable;
 import com.haulmont.cuba.gui.components.HasValue.ValueChangeEvent;
 import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.cuba.web.gui.components.WebGroupTable;
-import com.haulmont.cuba.web.widgets.CubaTable;
 
 import javax.inject.Inject;
 
@@ -50,7 +49,7 @@ public class BookPublicationBrowse extends StandardLookup<BookPublication> {
     public void onAggregateBoxValueChange(ValueChangeEvent<Boolean> event) {
         bookPublicationsTable.setAggregatable(event.getValue());
         // workaround
-//        ((CubaTable) ((WebGroupTable) bookPublicationsTable).getComponent()).setFooterVisible(event.getValue());
+//        ((WebGroupTable<?>) bookPublicationsTable).getComponent().setFooterVisible(event.getValue());
     }
 
 }
