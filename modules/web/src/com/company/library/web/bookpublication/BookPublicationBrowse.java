@@ -48,8 +48,6 @@ public class BookPublicationBrowse extends StandardLookup<BookPublication> {
     @Subscribe("aggregateBox")
     public void onAggregateBoxValueChange(ValueChangeEvent<Boolean> event) {
         bookPublicationsTable.setAggregatable(event.getValue());
-        // workaround
-//        ((WebGroupTable<?>) bookPublicationsTable).getComponent().setFooterVisible(event.getValue());
     }
 
 }
