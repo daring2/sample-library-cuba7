@@ -20,7 +20,8 @@
             spacing="true">
         <filter id="filter"
                 applyTo="booksTable"
-                dataLoader="booksDl">
+                dataLoader="booksDl"
+                textMaxResults="true">
             <properties include=".*"/>
         </filter>
         <groupTable id="booksTable"
