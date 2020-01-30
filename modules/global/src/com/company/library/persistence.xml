@@ -28,5 +28,6 @@
         <class>com.company.library.entity.Publisher</class>
         <class>com.company.library.entity.Town</class>
         <class>com.company.library.entity.YearDatatype</class>
+        <class>com.company.library.entity.test.BaseTestEntity</class>
     </persistence-unit>
 </persistence>
