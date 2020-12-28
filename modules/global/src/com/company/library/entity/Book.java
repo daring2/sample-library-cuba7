@@ -28,7 +28,7 @@ import java.util.Set;
 public class Book extends StandardEntity {
     private static final long serialVersionUID = 2561809711185679867L;
 
-    @Column(name = "NAME", nullable = false, length = 100)
+    @Column(name = "NAME", nullable = false, length = 100, unique = true)
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
